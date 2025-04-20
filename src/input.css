@@ -5,6 +5,11 @@
     src: url("./fonts/Roboto-Regular.ttf");
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+*{
+    user-select: none;
+}
 .container{
     max-width: 1150px;
     width: 100%;
@@ -14,7 +19,13 @@
     margin-right: auto;
 }
 button{
+    transition: .3s ease;
+    border: 1px solid #FF0043;
+}
+button:hover{
     cursor: pointer;
+    color: #FF0043;
+    background: #fff;
 }
 .shadow{
     box-shadow: 0 0 10px lightgray;
